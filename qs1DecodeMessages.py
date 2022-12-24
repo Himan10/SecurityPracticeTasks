@@ -13,13 +13,13 @@ class SolveCiphers():
         """
         def doStuff(letter, key):
             def doStuff2(initial, final):
-                asciiValueOfChar = ord(char)
-                diff = asciiValueOfChar - initial
+                unicodeValueOfChar = ord(char)
+                diff = unicodeValueOfChar - initial
                 if diff < key:
                     remainingN = key - diff
                     return chr(final - remainingN)
                 else:
-                    return chr(asciiValueOfChar - key)
+                    return chr(unicodeValueOfChar - key)
             
             if letter.islower():
                 return doStuff2(97, 123)
