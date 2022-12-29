@@ -5,7 +5,7 @@ class SolveCiphers():
     def __init__(self, cipherName):
         self.cipherName = cipherName
 
-    def ceaserCipher(self):
+    def caeserCipher(self):
         """Here the encryption on the string has already done before, 
         means, shift key has already been applied to the text for making it
         encrypted. This time, to decrypt the key, we will apply the shift
@@ -13,18 +13,20 @@ class SolveCiphers():
         """
         def doStuff(letter, key):
             def doStuff2(initial, final):
-                unicodeValueOfChar = ord(char)
-                diff = unicodeValueOfChar - initial
-                if diff < key:
-                    remainingN = key - diff
-                    return chr(final - remainingN)
-                else:
-                    return chr(unicodeValueOfChar - key)
+                unicodeValueOfLetter = ord(letter)
+                shiftKey = key
+                while shiftKey > 0:
+                    if unicodeValueOfLetter == initial:
+                        unicodeValueOfLetter = final
+                    else:
+                        unicodeValueOfLetter -= 1
+                    shiftKey -= 1
+                return chr(unicodeValueOfLetter)
             
             if letter.islower():
-                return doStuff2(97, 123)
+                return doStuff2(97, 122)
             else:
-                return doStuff2(65, 91) # for upper letters
+                return doStuff2(65, 90) # for upper letters
 
         encodedInput = input("Enter encoded input : ")
         shiftKey = 0
