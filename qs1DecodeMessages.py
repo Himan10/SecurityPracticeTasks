@@ -1,9 +1,15 @@
 # This is the 1st question mentioned in task2Details
 
+import json
+import pprint
+
 class SolveCiphers():
 
-    def __init__(self, cipherName):
+    def __init__(self, cipherName=None):
         self.cipherName = cipherName
+        with open("words_dictionary.json", 'r') as fp:
+            self.wordsDict = json.load(fp)
+
 
     def caeserCipher(self):
         """Here the encryption on the string has already done before, 
@@ -22,15 +28,18 @@ class SolveCiphers():
                         unicodeValueOfLetter -= 1
                     shiftKey -= 1
                 return chr(unicodeValueOfLetter)
-            
+           
+            if letter.isspace():
+                return " "
             if letter.islower():
-                return doStuff2(97, 122)
+                return doStuff2(97, 122) # for lower letters
             else:
                 return doStuff2(65, 90) # for upper letters
 
         encodedInput = input("Enter encoded input : ")
         shiftKey = 0
         shiftKeyLimit = 0
+        result = {}
         if not encodedInput:
             raise Exception("Empty value provided")
         try:
@@ -44,20 +53,26 @@ class SolveCiphers():
 
         if shiftKey:
             string = ""
-            for char in encodedInput:
-                # lets consider it as all UPPERCASE
-                if char.isspace():
-                    string += char
-                    continue
-                string += doStuff(char, shiftKey)
-            print(string)
+            for i in range(len(encodedInput)):
+                string += doStuff(encodedInput[i], shiftKey)
+                if (encodedInput[i].isspace() or i == len(encodedInput)-1):
+                    # find out the existence of a word
+                    word = string.split()[-1].lower()
+                    result[word] = self.wordsDict.get(word, 0)
+            print(string, result)
 
         elif shiftKeyLimit:
             for key in range(1, shiftKeyLimit+1):
                 string = ""
-                for char in encodedInput:
-                    if char.isspace():
-                        string += char
-                        continue
-                    string += doStuff(char, key)
-                print(string)
+                total = 0
+                for i in range(len(encodedInput)):
+                    string += doStuff(encodedInput[i], key)
+                    if (encodedInput[i].isspace() or i == len(encodedInput)-1):
+                        word = string.split()[-1].lower()
+                        total += self.wordsDict.get(word, 0)
+
+                result[string] = total
+
+        pprint.pprint(result)
+        # find shift key : maximum int present in the dictionary
+        max
