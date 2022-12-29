@@ -8,4 +8,5 @@
 		
 		Explanation: We don't have any `shift key` available to decode this string, in one of the online decoders I've seen that they are using 7 as the default shift key value, but here's a twist, we will find out what's the correct `shift key` and what's the correct decoded version of this string. 
 
-		Source File: qs1DecodeMessages.ceaserCypher()
+		Source File: qs1DecodeMessages
+        Method: SolveCiphers().caeserCipher()
