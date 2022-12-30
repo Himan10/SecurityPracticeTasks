@@ -12,5 +12,5 @@
 		File: words_dictionary.json  
 		Download it from [url](https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json)
 		
-		**Source File :** qs1DecodeMessages.py  
+		**Source File :** decodeCaeserCipher.py  
         	**Method :** SolveCiphers().caeserCipher()
