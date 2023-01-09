@@ -13,4 +13,15 @@
 		Download it from [url](https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json)
 		
 		**Source File :** decodeCaeserCipher.py  
-        	**Method :** SolveCiphers().caeserCipher()
+        	**Method :** SolveCiphers().caeserCipher()  <br><br>
+		
+	2. ***Morse Code*** : .-- . .-.. -.-. --- -- . / - --- / -. ... -.-. .
+
+		Explanation: We have this string encoded in a morse code format, morse code is basically a technique where we represents numbers, letters, punctuations in the form of dot & dashes. We can also represent morse code in binary, but for this task, we will use the dot-dash style for the encoded output.  
+		  
+		**Requirements :**  
+		File: morse-code.json  
+		This file is necessary because it contains a dictionary of letters, number, punctuations and their associated morse code representation.  
+		  
+		**Source File :** morseCodeEncodeDecode.py  
+		**Method :** main() <br><br>
