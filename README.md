@@ -39,3 +39,9 @@
 		  
 		**Souce File :** urlencoding.py  
 		**Method :** main() <br><br>
+		
+	5. ***Unicode Encoding*** : %u0045%u006e%u0063%u006f%u0064%u0065%u0020%u0077%u0069%u0074%u0068%u0020%u0055%u006e%u0069%u0063%u006f%u0064%u0065%u0020%u0065%u006e%u0074%u0069%u0074%u0079  
+	  
+		Explanation: Decode the above text which is unicode encoded. Unicode is used to provide each characters in any language, either latin, american, british, indian, characters a unique code point. This is necessary because after all, in order to understand and get it accepted by the machine, it needs to be converted to a machine language, and in order to convert a character into a machine language, we should know how to represent it in an integer. For further readings about why the code points is necessary and representation of unicode characters, you can go through this [Documentation](https://docs.python.org/3/howto/unicode.html)  
+		
+		**Source File :** unicode.py
