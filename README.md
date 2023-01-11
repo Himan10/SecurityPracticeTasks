@@ -32,3 +32,10 @@
 		  
 		**Source File :** binaryEncodeDecode.py  
 		**Method :** main() <br><br>
+		  
+	4. ***Url Encoding*** : Do%21you%28know%29%23URL%2aencoding%5cis%2ffun%3f  
+	  
+	  	Explanation: The above string is encoded with the url encoding, means some of the characters present in the string has been replaced with their ascii value, which then later converted into the hex. For example: the punctuation "!" ascii value is 33, convert this value into hex, we will get "0x21". In a similar way, the string contains many more like this.  
+		  
+		**Souce File :** urlencoding.py  
+		**Method :** main() <br><br>
