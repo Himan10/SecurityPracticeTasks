@@ -46,7 +46,7 @@
 		
 		**Source File :** unicode.py <br><br>
 		
-	6. ***SHA-1*** : known as *Secure Hash Algorithm 1*, In this task, There will be possible combination of alphabets, from AAAA to ZZZZ, and it has been asked to find the SHA-1 of all the combinations and print the combination plus their SHA-1.  
+	6. ***SHA-1*** : known as *Secure Hash Algorithm 1*, In this task, There will be possible combination of alphabets, from AAAA to ZZZZ, and it has been asked to find the SHA-1 of all the combinations and print the combination plus their SHA-1. SHA is basically a hash function, where a user inputs some data and the function returns 20 byte data in hexadecimal format i.e., 40 hexadecimal characters of size 160 bit.
 	  
 		**Possible Combinations :**   
 		AAAA,  
