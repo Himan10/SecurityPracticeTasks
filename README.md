@@ -39,3 +39,29 @@
 		  
 		**Souce File :** urlencoding.py  
 		**Method :** main() <br><br>
+		
+	5. ***Unicode Encoding*** : %u0045%u006e%u0063%u006f%u0064%u0065%u0020%u0077%u0069%u0074%u0068%u0020%u0055%u006e%u0069%u0063%u006f%u0064%u0065%u0020%u0065%u006e%u0074%u0069%u0074%u0079  
+	  
+		Explanation: Decode the above text which is unicode encoded. Unicode is used to provide each characters in any language, either latin, american, british, indian, characters a unique code point. This is necessary because after all, in order to understand and get it accepted by the machine, it needs to be converted to a machine language, and in order to convert a character into a machine language, we should know how to represent it in an integer. For further readings about why the code points is necessary and representation of unicode characters, you can go through this [Documentation](https://docs.python.org/3/howto/unicode.html)  
+		
+		**Source File :** unicode.py <br><br>
+		
+	6. ***SHA-1*** : known as *Secure Hash Algorithm 1*, In this task, There will be possible combination of alphabets, from AAAA to ZZZZ, and it has been asked to find the SHA-1 of all the combinations and print the combination plus their SHA-1.  
+	  
+		**Possible Combinations :**   
+		AAAA,  
+		AAAB,   
+		...  
+		AAAZ,  
+		AABA,  
+		AABB,  
+		AABZ,  
+		...  
+		ZZZZ  
+		<br>
+		**Output :**   
+		AAAA,e2512172abf8cc9f67fdd49eb6cacf2df71bbad3  
+		AAAB,a8aefbd08cdb3eb98efe00a915ff5f3670c3cb78  
+		...  
+		...  
+		ZZZZ,9865d483bc5a94f2e30056fc256ed3066af54d04  
